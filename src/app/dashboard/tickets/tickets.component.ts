@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NewTicketComponent } from './new-ticket/new-ticket.component';
+import { type Ticket } from './ticket.module';
 
 @Component({
   selector: 'app-tickets',
@@ -9,5 +10,16 @@ import { NewTicketComponent } from './new-ticket/new-ticket.component';
   styleUrl: './tickets.component.css'
 })
 export class TicketsComponent {
+  tickets:Ticket[] =[];
+  addHandle(ticketData:{title:string; text: string}){
+    const newTicket:Ticket = {
+      id: Math.round(Math.random() * 10000).toString(),
+      title: ticketData.title,
+      request: ticketData.text,
+      status: 'open',
+    }
+    this.tickets.unshift(newTicket);
+  }
+  
 
 }

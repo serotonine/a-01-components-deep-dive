@@ -7,15 +7,20 @@ import {
   ViewChildren,
   viewChild,
   AfterViewInit,
+  output,
 } from '@angular/core';
 import { ButtonComponent } from '../../../shared/button/button.component';
 import { InputComponent } from '../../../shared/input/input.component';
 import { FormsModule } from '@angular/forms';
+import {type Ticket } from '../ticket.module';
 
 @Component({
   selector: 'app-new-ticket',
   standalone: true,
-  imports: [ButtonComponent, InputComponent, FormsModule],
+  imports: [
+    ButtonComponent,
+    InputComponent,
+    FormsModule],
   templateUrl: './new-ticket.component.html',
   styleUrl: './new-ticket.component.css',
 })
@@ -27,6 +32,9 @@ export class NewTicketComponent implements AfterViewInit {
   // As function (Agular 17). Signal feature.
   private _form =
     viewChild.required<ElementRef<HTMLFormElement>>('currentForm');
+  // Binding.
+  /* @Output() add = new EventEmitter(); */
+  add = output<{title:string, text:string}>();
   //
   // Retrieve multiple elements.
   /* @ViewChildren(ButtonComponent) button;*/
@@ -35,11 +43,13 @@ export class NewTicketComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     console.log('AFTER VIEW INIT')
   }
-  @Output() submit = new EventEmitter();
+ 
 
   onSubmit(title: HTMLInputElement, text: HTMLTextAreaElement) {
-    // console.log(title.value);
-    // console.log(text.value);
+    this.add.emit({
+      title: title.value,
+      text: text.value,
+    });
     console.dir(this.form?.nativeElement);
     // ? check if form exist to apply the method.
     /* nativeElement that reset does not exist on the type
@@ -48,6 +58,6 @@ export class NewTicketComponent implements AfterViewInit {
     this.form?.nativeElement.reset();
     // Function alternative (Agular 17).
     /* this._form.nativeElement.reset(); */
-    // this.submit.emit();
+    // 
   }
 }
