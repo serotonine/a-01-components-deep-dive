@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output, ViewChild, ElementRef } from '@angular/core';
+import { Component, EventEmitter, Output, ViewChild, ElementRef, ViewChildren, viewChild } from '@angular/core';
 import { ButtonComponent } from '../../../shared/button/button.component';
 import { InputComponent } from '../../../shared/input/input.component';
 import { FormsModule } from '@angular/forms';
@@ -15,6 +15,11 @@ export class NewTicketComponent {
   // Must be typed ElementRef with the type of this ElementRef.
   // ? because this element could not be initialized first.
   @ViewChild('currentForm') form?:ElementRef<HTMLFormElement>;
+  // As function (Agular 17). Signal feature.
+  private _form = viewChild.required<ElementRef<HTMLFormElement>>('currentForm');
+  //
+  // Retrieve multiple elements.
+  /* @ViewChildren(ButtonComponent) button;*/
   @Output() submit = new EventEmitter();
   
   onSubmit(title:HTMLInputElement, text:HTMLTextAreaElement){
@@ -26,6 +31,8 @@ export class NewTicketComponent {
       because inside of the form,
       we stored that ElementRef object, not the HTMLFormElement.*/
     this.form?.nativeElement.reset(); 
+    // Function alternative (Agular 17).
+    /* this._form.nativeElement.reset(); */
    // this.submit.emit();
 
   }
