@@ -48,3 +48,6 @@ The app-myComponent is rendered in the DOM, it could be redundant.
 [Angular Doc](https://angular.dev/guide/components/lifecycle)
 `NgOnInit` must be prefered as constructor(){} ***Good Practice***
 - `implements OnInit` => better debug.
+- `implements OnDestroy`
+- `[(ngModel)]` alternative: Template variables `#myVar`.
+  - [128. Extracting Input Values via Template Variables](https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/44115704#questions/22068585)

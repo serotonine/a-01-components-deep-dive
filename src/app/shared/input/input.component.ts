@@ -32,7 +32,7 @@ export class InputComponent {
     return this.label().toLowerCase().trim().split(' ').join('-');
   }
   onClick() {
-    console.log('Clicked');
-    console.log(this.el);
+    // console.log('Clicked');
+    // console.log(this.el);
   }
 }
