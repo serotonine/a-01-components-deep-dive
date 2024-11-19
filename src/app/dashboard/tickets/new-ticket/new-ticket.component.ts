@@ -13,9 +13,11 @@ import { FormsModule } from '@angular/forms';
 export class NewTicketComponent {
   @Output() submit = new EventEmitter();
   
-  onSubmit(title:HTMLInputElement, text:HTMLTextAreaElement){
+  onSubmit(title:HTMLInputElement, text:HTMLTextAreaElement, form:HTMLFormElement){
     console.log(title.value);
     console.log(text.value);
+    console.dir(form);
+    form.reset();
    // this.submit.emit();
 
   }

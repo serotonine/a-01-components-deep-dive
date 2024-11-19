@@ -51,3 +51,4 @@ The app-myComponent is rendered in the DOM, it could be redundant.
 - `implements OnDestroy`
 - `[(ngModel)]` alternative: Template variables `#myVar`.
   - [128. Extracting Input Values via Template Variables](https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/44115704#questions/22068585)
+  - [ViewChild](https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/44115716#questions/22068585)
