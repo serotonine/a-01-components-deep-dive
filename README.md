@@ -55,3 +55,5 @@ The app-myComponent is rendered in the DOM, it could be redundant.
   - [ViewChildren](https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/44115718)
   - [ContentChild, ContentChildren](https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/44115738)
   - [AfterViewInit, AfterContentInit](https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/44115756)
+  - [AfterNextRender ,AfterRender hooks, Signal value](https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/44115766)
+  - [ effect()](https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/44115772)

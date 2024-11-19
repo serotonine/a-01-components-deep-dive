@@ -9,6 +9,8 @@ import {
   ContentChild,
   contentChild,
   AfterContentInit,
+  afterRender,
+  afterNextRender,
 } from '@angular/core';
 
 @Component({
@@ -24,6 +26,11 @@ import {
   },
 })
 export class InputComponent implements AfterContentInit{
+  constructor(){
+    // Triggered after all changes in the whole app.
+    afterRender(()=> console.log('AFTER RENDER'));
+    afterNextRender(()=> console.log('AFTER NEXT RENDER'));
+  }
   // host: Alternative.
   /* @HostBinding('class') className="control";
   @HostListener('click') onClick(){do stuff...} */

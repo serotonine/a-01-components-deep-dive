@@ -1,4 +1,4 @@
-import { Component, DestroyRef, OnDestroy, OnInit , inject} from '@angular/core';
+import { Component, DestroyRef, OnDestroy, OnInit , effect, inject, signal} from '@angular/core';
 
 @Component({
   selector: 'app-server-status',
@@ -9,7 +9,15 @@ import { Component, DestroyRef, OnDestroy, OnInit , inject} from '@angular/core'
 })
 // , OnDestroy (Angular version < Angular v.17)
 export class ServerStatusComponent implements OnInit {
-  currentStatus: 'online' | 'offline' | 'unknown' = 'offline';
+  /* currentStatus: 'online' | 'offline' | 'unknown' = 'offline'; */
+  // Signal value.
+  currentStatus = signal<'online' | 'offline' | 'unknown'>('offline');
+  constructor(){
+    effect(()=> {
+console.log('ServerStatusComponent current status', this.currentStatus());
+    });
+  }
+
   // Angular version < Angular v.17
   /* private _interval?: NodeJS.Timeout; */
   // constructor(){
@@ -31,7 +39,7 @@ export class ServerStatusComponent implements OnInit {
     // Angular version < Angular v.17
     /* this._interval = setInterval(() => { */
     // Angular version >= Angular v.17
-    const interval = setInterval(() => {
+   /*  const interval = setInterval(() => {
       const rand = Math.random();
       if (rand < 0.5) {
         this.currentStatus = 'online';
@@ -39,6 +47,17 @@ export class ServerStatusComponent implements OnInit {
         this.currentStatus = 'offline';
       } else {
         this.currentStatus = 'unknown';
+      }
+    }, 5000); */
+    // With Signal.
+    const interval = setInterval(() => {
+      const rand = Math.random();
+      if (rand < 0.5) {
+        this.currentStatus.set('online');
+      } else if (rand < 0.9) {
+        this.currentStatus.set('offline');
+      } else {
+        this.currentStatus.set('unknown');
       }
     }, 5000);
     this.destroyRef.onDestroy(() => clearInterval(interval) );
