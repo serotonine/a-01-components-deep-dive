@@ -1,4 +1,4 @@
-# ANGULAR Component deep dive => CSS refinement.
+# ANGULAR Component deep dive.
 ### Repository
 https://github.com/serotonine/a-01-components-deep-dive
 
