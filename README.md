@@ -39,10 +39,10 @@ The app-myComponent is rendered in the DOM, it could be redundant.
     }
   /* @HostListener('click') onClick(){do stuff...} */
   ```
-- [Accessing Host Elements Programatically](https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/44115640#questions/22068585)
-- [Class Binding repetition](https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/44115648#questions/22068585).
+- [Accessing Host Elements Programatically](https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/44115640)
+- [Class Binding repetition](https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/44115648).
 `[class]` binding.
-- [Template Style binding](https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/44115650#questions/22068585)
+- [Template Style binding](https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/44115650)
 `<div [style.height]="(dataPoint.value / maxTraffic) * 100 + '%'"></div>`
 - ***Component Lifecycle***
 [Angular Doc](https://angular.dev/guide/components/lifecycle)
@@ -52,4 +52,6 @@ The app-myComponent is rendered in the DOM, it could be redundant.
 - `[(ngModel)]` alternative: Template variables `#myVar`.
   - [128. Extracting Input Values via Template Variables](https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/44115704#questions/22068585)
   - [ViewChild, ElementRef](https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/44115716)
-  -   - [ViewChildren](https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/44115718)
+  - [ViewChildren](https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/44115718)
+  - [ContentChild, ContentChildren](https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/44115738)
+  - [AfterViewInit, AfterContentInit](https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/44115756)
