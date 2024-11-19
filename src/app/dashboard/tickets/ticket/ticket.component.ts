@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, input, signal } from '@angular/core';
+import { Ticket } from '../ticket.module';
 
 @Component({
   selector: 'app-ticket',
@@ -8,5 +9,12 @@ import { Component } from '@angular/core';
   styleUrl: './ticket.component.css'
 })
 export class TicketComponent {
+data = input.required<Ticket>();
+isExpanded = signal(true);
+onToggleExpanded(){
+  /* this.isExpanded.set(!this.isExpanded()); */
+  // Alternative way.
+  this.isExpanded.update((expanded) => !expanded);
+}
 
 }
