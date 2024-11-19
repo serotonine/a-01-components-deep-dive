@@ -59,3 +59,5 @@ The app-myComponent is rendered in the DOM, it could be redundant.
   - [ effect()](https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/44115772)
   - [ onCleanUp](https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/44127674)
 - [`@for + @empty + $first + $last + $even + $odd + $count `](https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/44115798)
+- Input alias !Not recommended! `data = input.required<Ticket>({alias: 'dataAlias'});`
+- Input transform !Not recommended! `data = input.required<Ticket>(transform: (value)=> +value);`

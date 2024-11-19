@@ -12,6 +12,7 @@ import { type Ticket } from './ticket.module';
 })
 export class TicketsComponent {
   tickets:Ticket[] =[];
+  // Handlers.
   addHandle(ticketData:{title:string; text: string}){
     const newTicket:Ticket = {
       id: Math.round(Math.random() * 10000).toString(),
@@ -20,6 +21,14 @@ export class TicketsComponent {
       status: 'open',
     }
     this.tickets.unshift(newTicket);
+  }
+  closeTicketHandle(id:string){
+    this.tickets = this.tickets.map((ticket)=>{
+      if(ticket.id === id){
+        return {...ticket, status:'closed'}
+      }
+      return ticket;
+    });
   }
   
 
