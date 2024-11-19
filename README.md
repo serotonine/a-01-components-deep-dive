@@ -1,12 +1,10 @@
 # ANGULAR Component deep dive => CSS refinement.
 ### Repository
-[https://github.com/serotonine/react_practice_side_effect](https://github.com/serotonine/react_practice_side_effect)
+https://github.com/serotonine/a-01-components-deep-dive
 
-### Page
-[https://serotonine.github.io/react_practice_side_effect/](https://serotonine.github.io/react_practice_side_effect)
 
 ### About
-Build [Maximilian Schwarzmüller](https://www.udemy.com/user/maximilian-schwarzmuller) react_Quizz : https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/8231834 (see Udemy course).
+Build [Maximilian Schwarzmüller](https://www.udemy.com/user/maximilian-schwarzmuller) Component Deep Dive: See below links.
 
 ***
 
