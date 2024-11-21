@@ -2,6 +2,8 @@
 ### Repository
 https://github.com/serotonine/a-01-components-deep-dive
 
+### Page
+https://serotonine.github.io/a-01-components-deep-dive/
 
 ### About
 Build [Maximilian Schwarzmüller](https://www.udemy.com/user/maximilian-schwarzmuller) Component Deep Dive: See below links.
